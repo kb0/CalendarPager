@@ -60,7 +60,7 @@ public class DayUtils {
 
   public static int calculateDayPosition(CalendarDay startDay, CalendarDay day) {
     long x = day.getTime() - startDay.getTime();
-    return (int) x / (1000 * 60 * 60 * 24);
+    return (int) (x / (1000 * 60 * 60 * 24));
   }
 
   public static String formatEnglishTime(long times) {
