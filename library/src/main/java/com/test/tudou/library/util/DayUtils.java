@@ -1,9 +1,9 @@
 package com.test.tudou.library.util;
 
 import com.test.tudou.library.model.CalendarDay;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
@@ -18,7 +18,7 @@ public class DayUtils {
 
   public static int calculateWeekCount(CalendarDay startDay, CalendarDay endDay) {
     long x = endDay.getTime() - startDay.getTime();
-    int days =(int) x / (1000 * 60 * 60 * 24) + 1;
+    int days =(int) (x / (1000 * 60 * 60 * 24) + 1);
     Calendar calendar = Calendar.getInstance();
     calendar.setTimeInMillis(startDay.getTime());
     int startDayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
